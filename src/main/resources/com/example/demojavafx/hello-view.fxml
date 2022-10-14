@@ -1,16 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Tooltip?>
+<VBox alignment="TOP_LEFT" xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.example.demojavafx.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+    <ToolBar>
+        <Button onAction="#onGeneratePasswordButtonClick">
+            <tooltip>
+                <Tooltip text="Generate Password" />
+            </tooltip>
+            <graphic>
+                <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="/dice-icon.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button onAction="#onCopyPasswordButtonClick">
+            <tooltip>
+                <Tooltip text="Copy Password" />
+            </tooltip>
+            <graphic>
+                <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="/copy-icon.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+    </ToolBar>
+
+    <PasswordField fx:id="passwordField"/>
 </VBox>
