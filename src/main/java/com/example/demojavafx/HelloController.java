@@ -9,9 +9,11 @@ public class HelloController {
     @FXML
     private PasswordField passwordField;
 
+    private PasswordGenerator passwordGenerator = new PasswordGeneratorImpl();
+
     @FXML
     protected void onGeneratePasswordButtonClick() {
-        String generatedPassword = "8bg?vq$R>Y&aLQ9y";
+        String generatedPassword = passwordGenerator.generate();
         passwordField.setText(generatedPassword);
     }
 
