@@ -9,7 +9,7 @@ public class HelloController {
     @FXML
     private PasswordField passwordField;
 
-    private PasswordGenerator passwordGenerator = new PasswordGeneratorImpl();
+    private final PasswordGenerator passwordGenerator = new PasswordGeneratorImpl();
 
     @FXML
     protected void onGeneratePasswordButtonClick() {
