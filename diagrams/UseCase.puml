@@ -1,11 +1,12 @@
 @startuml
+!theme amiga
 left to right direction
 
 actor "User" as user
 
 rectangle demo-java-fx {
-  usecase "Generate Password" as generatePassword
   usecase "Copy Password" as copyPassword
+  usecase "Generate Password" as generatePassword
 }
 
 user --> generatePassword
