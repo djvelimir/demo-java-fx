@@ -1,4 +1,4 @@
 @startuml UseCase
 !theme amiga
-!include ./UseCase.puml
+!include https://raw.githubusercontent.com/djvelimir/demo-java-fx/main/diagrams/UseCase.puml
 @enduml
